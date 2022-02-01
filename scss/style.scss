@@ -19,10 +19,15 @@ $breakpoints: (
     @content;
   }
 }
-
+@mixin fz($size: 16) {
+  font-size: ($size / 10) + rem;
+}
+html {
+  font-size: 62.5%;
+}
 body {
   font-family: "遊ゴシック", "Montserrat", "serif";
-  font-size: 16px;
+  font-size: 1.6rem;
   line-height: 1.6;
   background: #f3f3f3;
 }
@@ -45,7 +50,7 @@ a {
   padding: 0 40px;
 }
 .section-title {
-  font-size: 36px;
+  font-size: 3.6rem;
   font-weight: bold;
   text-align: center;
 }
@@ -78,7 +83,7 @@ a {
 .header-logo {
   display: none;
   color: #3e3e3e;
-  font-size: 23px;
+  font-size: 2.3rem;
   font-weight: bold;
   line-height: 63px;
   @include mq(sm) {
@@ -104,7 +109,7 @@ a {
     }
   }
   @include mq(sm) {
-    font-size: 18px;
+    font-size: 1.8rem;
 
     & + & {
       margin-top: 30px;
@@ -137,14 +142,14 @@ a {
     text-align: center;
   }
   &__title {
-    font-size: 32px;
+    font-size: 3.2rem;
     font-weight: bold;
     letter-spacing: 0.02px;
     line-height: (48 / 32);
     margin-bottom: 36px;
   }
   &__text {
-    font-size: 18px;
+    font-size: 1.8rem;
     letter-spacing: 0.45px;
     font-weight: bold;
     line-height: (28 / 18);
@@ -215,12 +220,12 @@ a {
 
   &__time {
     margin-right: 30px;
-    font-size: 18px;
+    font-size: 1.8rem;
     padding-top: 3px;
   }
 
   &__label {
-    font-size: 14px;
+    font-size: 1.4rem;
     border: solid 2px #3b69ff;
     border-radius: 50px;
     padding: 8px 30px;
@@ -231,7 +236,7 @@ a {
 
   &__text {
     width: 100%;
-    font-size: 18px;
+    font-size: 1.8rem;
     padding-top: 3px;
   }
 }
@@ -304,12 +309,12 @@ a {
   }
 
   &__title {
-    font-size: 20px;
+    font-size: 2rem;
     letter-spacing: 4px;
     line-height: (28 /20);
   }
   &__text {
-    font-size: 14px;
+    font-size: 1.4rem;
     margin-top: 14px;
   }
 }
@@ -362,11 +367,11 @@ a {
   padding: 16px;
 }
 .swiper-text1 {
-  font-size: 14px;
+  font-size: 1.4rem;
   font-weight: bold;
 }
 .swiper-text2 {
-  font-size: 12px;
+  font-size: 1.2rem;
 }
 .swiper-pagination {
   position: static; //デフォルトで効いているabsoluteを消す
@@ -395,7 +400,7 @@ a {
 .btn-view {
   padding: 20px 80px;
   border: solid 1px #ffffff;
-  font-size: 20px;
+  font-size: 2rem;
   letter-spacing: 4px;
   background: #3e3e3e;
   color: #fff;
@@ -431,13 +436,13 @@ a {
         }
         th {
           width: 27.3%;
-          font-size: 24px;
+          font-size: 2.4rem;
           background: #3e3e3e;
           color: #fff;
           font-weight: 500;
         }
         td {
-          font-size: 24px;
+          font-size: 2.4rem;
           font-weight: 500;
           padding-left: 40px;
           @include mq(sm) {
@@ -449,7 +454,7 @@ a {
   }
 }
 .price-attention {
-  font-size: 12px;
+  font-size: 1.2rem;
   margin-top: 12px;
 }
 /*=====================================================
@@ -481,7 +486,7 @@ a {
     padding: 40px 20px;
   }
   &__title {
-    font-size: 36px;
+    font-size: 3.6rem;
     font-weight: bold;
   }
 }
@@ -499,7 +504,7 @@ a {
   }
   &__text {
     line-height: (24 / 16);
-    font-size: 18px;
+    font-size: 1.8rem;
   }
 }
 .comment-img {
@@ -638,13 +643,13 @@ a {
   }
 
   &__left--title {
-    font-size: 36px;
+    font-size: 3.6rem;
     font-weight: bold;
   }
   &__left--address {
     margin-top: 60px;
     p {
-      font-size: 16px;
+      font-size: 1.6rem;
       line-height: (24/16);
     }
     @include mq(sm) {
@@ -676,7 +681,7 @@ a {
   margin-top: 32px;
   a {
     display: inline-block;
-    font-size: 22px;
+    font-size: 2.2rem;
     letter-spacing: 2px;
     padding: 20px 80px;
     z-index: 2;
@@ -694,7 +699,7 @@ a {
 .access-btn2 {
   display: none;
   a {
-    font-size: 22px;
+    font-size: 2.2rem;
     letter-spacing: 2px;
     padding: 20px 80px;
     z-index: 2;
@@ -736,7 +741,7 @@ a {
   color: #fff;
 
   &__title {
-    font-size: 36px;
+    font-size: 3.6rem;
     font-weight: bold;
     text-align: center;
   }
@@ -806,7 +811,7 @@ a {
       width: 40px;
       background: #ff4646;
       color: #fff;
-      font-size: 12px;
+      font-size: 1.2rem;
       padding: 2px 8px;
       border-radius: 2px;
       font-weight: bold;
@@ -868,7 +873,7 @@ a {
     color: #fff;
     margin-top: 40px;
     letter-spacing: 0.45px;
-    font-size: 18px;
+    font-size: 1.8rem;
     &:hover {
       opacity: 0.8;
     }
@@ -911,7 +916,7 @@ a {
 }
 .footer-sns {
   .fab {
-    font-size: 36px;
+    font-size: 3.6rem;
     &:first-child {
       margin-right: 30px;
       @include mq(sm) {
@@ -932,16 +937,16 @@ a {
 }
 .footer-right {
   .footer-sns-logo {
-    font-size: 40px;
+    font-size: 4rem;
     font-weight: bold;
     @include mq(sm) {
-      font-size: 32px;
+      font-size: 3.2rem;
     }
   }
   .footer-sub-logo {
     opacity: 0.6;
     margin-top: 10px;
-    font-size: 12px;
+    font-size: 1.2rem;
     text-align: right;
     @include mq(sm) {
       text-align: center;
