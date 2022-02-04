@@ -28,7 +28,7 @@ $(function() {
   });
 
   
-  jQuery('.q-a-question').on('click',function() {
+  jQuery('.q-a-item__question').on('click',function() {
     jQuery(this).next().slideToggle();
     jQuery(this).children('.drawer-icon').toggleClass('is-open');
   });
