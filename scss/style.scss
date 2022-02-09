@@ -5,7 +5,7 @@ $layout-width-inner: 1200px;
 /*=====================================================
 # ファイル分割
 ===================================================== */
-@use "header";
+@use "mixin";
 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,600;1,400&display=swap");
 $font-family-english: "Montserrat", sans-serif;
@@ -18,15 +18,7 @@ $breakpoints: (
   "md": "screen and (min-width: 768px)"
 ) !default;
 
-//メディアクエリー
-@mixin mq($breakpoint: md) {
-  @media #{map-get($breakpoints, $breakpoint)} {
-    @content;
-  }
-}
-@mixin fz($size: 16) {
-  font-size: ($size / 10) + rem;
-}
+
 html {
   font-size: 62.5%;
 }
@@ -45,90 +37,6 @@ img {
 a {
   color: inherit;
 }
-/*=====================================================
-# 共通
-===================================================== */
-.inner {
-  width: $layout-width-inner;
-  margin: 0 auto;
-  max-width: 100%;
-  padding: 0 40px;
-}
-.section-title {
-  font-size: 3.6rem;
-  font-weight: bold;
-  text-align: center;
-}
-/*=====================================================
-# header
-===================================================== */
-.header {
-  background: #ffffff1a;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 100;
-  height: 80px;
-  @include mq(sm) {
-    background-color: #fff;
-    height: 63px;
-  }
-}
-.header__inner {
-  width: $layout-width-inner;
-  margin: 0 auto;
-  max-width: 100%;
-  padding: 0 40px;
-  @include mq(sm) {
-    padding: 0 16px;
-  }
-}
-.header-logo {
-  display: none;
-  color: #3e3e3e;
-  font-size: 2.3rem;
-  font-weight: bold;
-  line-height: 63px;
-  @include mq(sm) {
-    display: block;
-  }
-}
-
-.header__nav-list {
-  justify-content: center;
-  @include mq(md) {
-    display: flex;
-  }
-  @include mq(sm) {
-    padding-top: 160px;
-    text-align: center;
-  }
-}
-
-.header__nav-item {
-  @include mq(md) {
-    &:not(:first-child) {
-      margin-left: 40px;
-    }
-  }
-  @include mq(sm) {
-    font-size: 1.8rem;
-
-    & + & {
-      margin-top: 30px;
-    }
-  }
-}
-
-.drawer-hamburger-icon {
-  height: 4px;
-  &::after,
-  &::before {
-    height: 4px;
-  }
-}
-
 /*=====================================================
 # top
 ===================================================== */
