@@ -5,9 +5,10 @@ $layout-width-inner: 1200px;
 /*=====================================================
 # ファイル分割
 ===================================================== */
-@use "mixin";
-@use "header";
-@use "common";
+@use "custom/mixin";
+@use "lay/header";
+@use "lay/footer";
+@use "lay/common"; 
 
 
 
@@ -804,74 +805,4 @@ a {
   &.-error {
     color: #f00;
   }
-}
-/*=====================================================
-# footer
-===================================================== */
-.footer {
-  background: #3e3e3e;
-  padding: 60px 160px;
-
-  @include mq(sm) {
-    padding: 60px 77px;
-  }
-}
-.footer-inner {
-  max-width: 960px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  color: #ffffff;
-  @include mq(sm) {
-    display: block;
-    text-align: center;
-  }
-}
-.footer-left {
-  opacity: 0.6;
-}
-.footer-sns {
-  .fab {
-    font-size: 3.6rem;
-    &:first-child {
-      margin-right: 30px;
-      @include mq(sm) {
-        margin-left: 20px;
-      }
-    }
-  }
-}
-.footer-inform {
-  margin-top: 40px;
-  a {
-    display: block;
-
-    &:not(:first-child) {
-      margin-top: 24px;
-    }
-  }
-}
-.footer-right {
-  .footer-sns-logo {
-    font-size: 4rem;
-    font-weight: bold;
-    @include mq(sm) {
-      font-size: 3.2rem;
-    }
-  }
-  .footer-sub-logo {
-    opacity: 0.6;
-    margin-top: 10px;
-    font-size: 1.2rem;
-    text-align: right;
-    @include mq(sm) {
-      text-align: center;
-    }
-  }
-}
-
-.drawer-overlay {
-  background: rgba(62, 62, 62, 1);
-  z-index: 99;
-  opacity: 0.7;
 }
