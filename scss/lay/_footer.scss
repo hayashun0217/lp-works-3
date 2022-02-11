@@ -7,7 +7,7 @@
   background: #3e3e3e;
   padding: 60px 160px;
 
-  @include mq(sm) {
+  @include mixin.mq(sm) {
     padding: 60px 77px;
   }
 }
@@ -17,7 +17,7 @@
   display: flex;
   justify-content: space-between;
   color: #ffffff;
-  @include mq(sm) {
+  @include mixin.mq(sm) {
     display: block;
     text-align: center;
   }
@@ -30,7 +30,7 @@
     font-size: 3.6rem;
     &:first-child {
       margin-right: 30px;
-      @include mq(sm) {
+      @include mixin.mq(sm) {
         margin-left: 20px;
       }
     }
@@ -50,7 +50,7 @@
   .footer-sns-logo {
     font-size: 4rem;
     font-weight: bold;
-    @include mq(sm) {
+    @include mixin.mq(sm) {
       font-size: 3.2rem;
     }
   }
@@ -59,7 +59,7 @@
     margin-top: 10px;
     font-size: 1.2rem;
     text-align: right;
-    @include mq(sm) {
+    @include mixin.mq(sm) {
       text-align: center;
     }
   }

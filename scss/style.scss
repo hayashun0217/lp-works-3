@@ -16,12 +16,6 @@ $layout-width-inner: 1200px;
 $font-family-english: "Montserrat", sans-serif;
 $font-ja: "遊ゴシック体";
 $font-en: "Montserrat";
-/* ブレークポイント */
-$breakpoints: (
-  //キー: 値
-  "sm": "screen and (max-width: 767px)",
-  "md": "screen and (min-width: 768px)"
-) !default;
 
 
 html {
@@ -54,7 +48,7 @@ a {
   padding: 220px 5% 0 55%;
   width: 100%;
 
-  @include mq(sm) {
+  @include mixin.mq(sm) {
     padding: 161px 0;
     text-align: center;
   }
@@ -95,7 +89,7 @@ a {
   margin-top: 120px;
   padding: 0 40px;
   box-sizing: content-box; //リセットcssでbox-sizing: border-bpx;を指定している場合、paddingを含めたインナー幅になってしまうため、デフォルト値に戻す
-  @include mq(sm) {
+  @include mixin.mq(sm) {
     padding: 0 15px;
   }
 }
@@ -114,13 +108,13 @@ a {
   &:last-child {
     border-bottom: 1px solid #cecdcd;
   }
-  @include mq(sm) {
+  @include mixin.mq(sm) {
     padding: 0;
   }
   &__link {
     display: flex;
     padding: 30px 0;
-    @include mq(sm) {
+    @include mixin.mq(sm) {
       display: block;
       padding: 15px 0 15px 15px;
     }
@@ -146,7 +140,7 @@ a {
     border: solid 2px #3b69ff;
     border-radius: 50px;
     padding: 8px 30px;
-    @include mq(sm) {
+    @include mixin.mq(sm) {
       padding: 4px 15px;
     }
   }
@@ -183,11 +177,11 @@ a {
   .section-title {
     color: #ffffff;
     padding: 60px 0;
-    @include mq(sm) {
+    @include mixin.mq(sm) {
       padding: 40px 0;
     }
   }
-  @include mq(sm) {
+  @include mixin.mq(sm) {
     height: 400px;
   }
 }
@@ -201,17 +195,17 @@ a {
   justify-content: space-between;
   box-shadow: 0px 5px 12px #3e3e3e33;
 
-  @include mq(sm) {
+  @include mixin.mq(sm) {
     display: block;
     padding: 40px 15px;
   }
 }
 .service-item {
-  @include mq(md) {
+  @include mixin.mq(md) {
     max-width: 230px;
     text-align: center;
   }
-  @include mq(sm) {
+  @include mixin.mq(sm) {
     width: 100%;
     text-align: center;
 
@@ -244,23 +238,23 @@ a {
   background-color: #f3f3f3;
   margin-top: 200px;
 
-  @include mq(sm) {
+  @include mixin.mq(sm) {
     margin-top: 500px;
   }
 }
 .results-inner {
-  @include mq(md) {
+  @include mixin.mq(md) {
     margin-left: 40px;
     max-width: 1240px;
     padding: 60px 0 60px 60px;
   }
   background: #3e3e3e;
   color: #fff;
-  @include mq(sm) {
+  @include mixin.mq(sm) {
     padding: 40px 0 40px 16px;
   }
 
-  @include mq(sm) {
+  @include mixin.mq(sm) {
     max-width: 100%;
   }
 }
@@ -273,7 +267,7 @@ a {
 .swiper-slide {
   max-width: 400px;
   margin-right: 40px;
-  @include mq(sm) {
+  @include mixin.mq(sm) {
     max-width: 274px;
   }
 }
@@ -294,7 +288,7 @@ a {
   position: static; //デフォルトで効いているabsoluteを消す
   padding: 48px 0;
   text-align: left;
-  @include mq(sm) {
+  @include mixin.mq(sm) {
     text-align: center;
   }
 }
@@ -328,7 +322,7 @@ a {
 ===================================================== */
 .price {
   padding: 120px 160px 260px;
-  @include mq(sm) {
+  @include mixin.mq(sm) {
     padding: 40px 16px 120px;
   }
 }
@@ -362,7 +356,7 @@ a {
           font-size: 2.4rem;
           font-weight: 500;
           padding-left: 40px;
-          @include mq(sm) {
+          @include mixin.mq(sm) {
             padding-left: 20px;
           }
         }
@@ -388,7 +382,7 @@ a {
   margin: 0 auto;
   justify-content: space-between;
 
-  @include mq(sm) {
+  @include mixin.mq(sm) {
     padding: 0 20px;
   }
 }
@@ -398,7 +392,7 @@ a {
   background: #fff;
   padding: 120px 60px;
   z-index: 2;
-  @include mq(sm) {
+  @include mixin.mq(sm) {
     width: 100%;
     padding: 40px 20px;
   }
@@ -414,7 +408,7 @@ a {
   &__img {
     flex: 0 0 100px;
     margin-right: 32px;
-    @include mq(sm) {
+    @include mixin.mq(sm) {
       width: 60px;
       margin-right: 20px;
     }
@@ -428,7 +422,7 @@ a {
   width: 45%;
   margin-top: 110px;
   z-index: 2;
-  @include mq(sm) {
+  @include mixin.mq(sm) {
     display: none;
   }
 }
@@ -440,7 +434,7 @@ a {
   left: 0;
   z-index: 1;
   width: 76.5%;
-  @include mq(sm) {
+  @include mixin.mq(sm) {
     width: 100%;
   }
 }
@@ -451,21 +445,21 @@ a {
   background: url(/img/qa-bg@2x.png) no-repeat center center/cover;
   padding-top: 60px;
   padding-bottom: 120px;
-  @include mq(sm) {
+  @include mixin.mq(sm) {
     padding: 40px 15px 60px;
   }
 }
 .q-a-inner {
   margin-top: 60px;
   padding: 0 40px;
-  @include mq(sm) {
+  @include mixin.mq(sm) {
     padding: 0;
   }
 }
 .q-a-items {
   width: 612 / 1200 * 100%;
   margin-left: auto;
-  @include mq(sm) {
+  @include mixin.mq(sm) {
     width: 100%;
   }
 }
@@ -525,7 +519,7 @@ a {
 .access {
   padding: 120px 0 100px;
   position: relative;
-  @include mq(sm) {
+  @include mixin.mq(sm) {
     background-color: #3e3e3e;
     padding: 40px 15px 60px;
   }
@@ -537,14 +531,14 @@ a {
   top: 0;
   left: 0;
   height: 504px;
-  @include mq(sm) {
+  @include mixin.mq(sm) {
     display: none;
   }
 }
 .access-content {
   display: flex;
   padding-right: 40px;
-  @include mq(sm) {
+  @include mixin.mq(sm) {
     display: block;
     padding-right: 0;
   }
@@ -552,10 +546,10 @@ a {
     color: #fff;
     z-index: 2;
     margin-right: 82px;
-    @include mq(md) {
+    @include mixin.mq(md) {
       margin-left: 100px;
     }
-    @include mq(sm) {
+    @include mixin.mq(sm) {
     }
   }
 
@@ -569,7 +563,7 @@ a {
       font-size: 1.6rem;
       line-height: (24/16);
     }
-    @include mq(sm) {
+    @include mixin.mq(sm) {
       margin-top: 40px;
     }
   }
@@ -588,7 +582,7 @@ a {
       height: 100%;
       box-shadow: 0px 5px 12px #3e3e3e33;
     }
-    @include mq(sm) {
+    @include mixin.mq(sm) {
       margin-top: 20px;
     }
   }
@@ -609,7 +603,7 @@ a {
       color: #3e3e3e;
     }
   }
-  @include mq(sm) {
+  @include mixin.mq(sm) {
     display: none;
   }
 }
@@ -623,13 +617,13 @@ a {
     color: #fff;
     border: solid 1px #ffffff;
 
-    @include mq(sm) {
+    @include mixin.mq(sm) {
       width: 100%;
       display: inline-block;
       text-align: center;
     }
   }
-  @include mq(sm) {
+  @include mixin.mq(sm) {
     display: block;
     margin-top: 30px;
   }
@@ -642,7 +636,7 @@ a {
   padding-bottom: 60px;
   background: url(/img/contact-bg@2x.png) no-repeat center center/cover;
 
-  @include mq(sm) {
+  @include mixin.mq(sm) {
     padding: 40px 16px 60px;
   }
 }
@@ -670,7 +664,7 @@ a {
 .contact-form {
   background: #ffffff;
   padding: 60px 90px;
-  @include mq(sm) {
+  @include mixin.mq(sm) {
     padding: 40px 12px;
   }
 }
@@ -678,7 +672,7 @@ a {
   display: flex;
   color: #3e3e3e;
   margin-top: 32px;
-  @include mq(sm) {
+  @include mixin.mq(sm) {
     display: block;
   }
 
@@ -689,7 +683,7 @@ a {
     margin-left: auto;
     width: 505px;
 
-    @include mq(sm) {
+    @include mixin.mq(sm) {
       width: 100%;
     }
   }
@@ -708,7 +702,7 @@ a {
     border: none;
     border-bottom: 1px solid #3e3e3e;
     padding: 10px;
-    @include mq(sm) {
+    @include mixin.mq(sm) {
       padding-left: 0;
     }
 
@@ -734,7 +728,7 @@ a {
       font-weight: bold;
       text-align: center;
 
-      @include mq(sm) {
+      @include mixin.mq(sm) {
         left: 100px;
       }
     }
@@ -779,7 +773,7 @@ a {
 }
 
 .contact-footer-submit {
-  @include mq(sm) {
+  @include mixin.mq(sm) {
     text-align: center;
   }
 

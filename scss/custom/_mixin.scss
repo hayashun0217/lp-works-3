@@ -1,3 +1,10 @@
+/* ブレークポイント */
+$breakpoints: (
+  //キー: 値
+  "sm": "screen and (max-width: 767px)",
+  "md": "screen and (min-width: 768px)"
+) !default;
+
 //メディアクエリー
 @mixin mq($breakpoint: md) {
   @media #{map-get($breakpoints, $breakpoint)} {
