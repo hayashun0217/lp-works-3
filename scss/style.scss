@@ -8,15 +8,12 @@ $layout-width-inner: 1200px;
 @use "custom/mixin";
 @use "lay/header";
 @use "lay/footer";
-@use "lay/common"; 
-
-
+@use "lay/common";
 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,600;1,400&display=swap");
 $font-family-english: "Montserrat", sans-serif;
 $font-ja: "遊ゴシック体";
 $font-en: "Montserrat";
-
 
 html {
   font-size: 62.5%;

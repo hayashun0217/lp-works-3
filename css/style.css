@@ -4,45 +4,6 @@
 ===================================================== */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,600;1,400&display=swap");
 /* ブレークポイント */
-html {
-  font-size: 62.5%;
-}
-
-body {
-  font-family: "遊ゴシック", "Montserrat", "serif";
-  font-size: 1.6rem;
-  line-height: 1.6;
-  background: #f3f3f3;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-a {
-  color: inherit;
-}
-
-/*=====================================================
-# 共通
-===================================================== */
-.inner {
-  width: 1200px;
-  margin: 0 auto;
-  max-width: 100%;
-  padding: 0 40px;
-}
-
-.section-title {
-  font-size: 3.6rem;
-  font-weight: bold;
-  text-align: center;
-}
-
-/*=====================================================
-# header
-===================================================== */
 .header {
   background: #ffffff1a;
   position: fixed;
@@ -118,6 +79,122 @@ a {
 }
 .drawer-hamburger-icon::after, .drawer-hamburger-icon::before {
   height: 4px;
+}
+
+/*=====================================================
+# footer
+===================================================== */
+.footer {
+  background: #3e3e3e;
+  padding: 60px 160px;
+}
+@media screen and (max-width: 767px) {
+  .footer {
+    padding: 60px 77px;
+  }
+}
+
+.footer-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  color: #ffffff;
+}
+@media screen and (max-width: 767px) {
+  .footer-inner {
+    display: block;
+    text-align: center;
+  }
+}
+
+.footer-left {
+  opacity: 0.6;
+}
+
+.footer-sns .fab {
+  font-size: 3.6rem;
+}
+.footer-sns .fab:first-child {
+  margin-right: 30px;
+}
+@media screen and (max-width: 767px) {
+  .footer-sns .fab:first-child {
+    margin-left: 20px;
+  }
+}
+
+.footer-inform {
+  margin-top: 40px;
+}
+.footer-inform a {
+  display: block;
+}
+.footer-inform a:not(:first-child) {
+  margin-top: 24px;
+}
+
+.footer-right .footer-sns-logo {
+  font-size: 4rem;
+  font-weight: bold;
+}
+@media screen and (max-width: 767px) {
+  .footer-right .footer-sns-logo {
+    font-size: 3.2rem;
+  }
+}
+.footer-right .footer-sub-logo {
+  opacity: 0.6;
+  margin-top: 10px;
+  font-size: 1.2rem;
+  text-align: right;
+}
+@media screen and (max-width: 767px) {
+  .footer-right .footer-sub-logo {
+    text-align: center;
+  }
+}
+
+.drawer-overlay {
+  background: #3e3e3e;
+  z-index: 99;
+  opacity: 0.7;
+}
+
+/*=====================================================
+# 共通
+===================================================== */
+.inner {
+  width: 1200px;
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 0 40px;
+}
+
+.section-title {
+  font-size: 3.6rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "遊ゴシック", "Montserrat", "serif";
+  font-size: 1.6rem;
+  line-height: 1.6;
+  background: #f3f3f3;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
 }
 
 /*=====================================================
@@ -953,84 +1030,3 @@ a {
 .contact-message.-error {
   color: #f00;
 }
-
-/*=====================================================
-# footer
-===================================================== */
-.footer {
-  background: #3e3e3e;
-  padding: 60px 160px;
-}
-@media screen and (max-width: 767px) {
-  .footer {
-    padding: 60px 77px;
-  }
-}
-
-.footer-inner {
-  max-width: 960px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  color: #ffffff;
-}
-@media screen and (max-width: 767px) {
-  .footer-inner {
-    display: block;
-    text-align: center;
-  }
-}
-
-.footer-left {
-  opacity: 0.6;
-}
-
-.footer-sns .fab {
-  font-size: 3.6rem;
-}
-.footer-sns .fab:first-child {
-  margin-right: 30px;
-}
-@media screen and (max-width: 767px) {
-  .footer-sns .fab:first-child {
-    margin-left: 20px;
-  }
-}
-
-.footer-inform {
-  margin-top: 40px;
-}
-.footer-inform a {
-  display: block;
-}
-.footer-inform a:not(:first-child) {
-  margin-top: 24px;
-}
-
-.footer-right .footer-sns-logo {
-  font-size: 4rem;
-  font-weight: bold;
-}
-@media screen and (max-width: 767px) {
-  .footer-right .footer-sns-logo {
-    font-size: 3.2rem;
-  }
-}
-.footer-right .footer-sub-logo {
-  opacity: 0.6;
-  margin-top: 10px;
-  font-size: 1.2rem;
-  text-align: right;
-}
-@media screen and (max-width: 767px) {
-  .footer-right .footer-sub-logo {
-    text-align: center;
-  }
-}
-
-.drawer-overlay {
-  background: #3e3e3e;
-  z-index: 99;
-  opacity: 0.7;
-}
-/*# sourceMappingURL=style.css.map */
