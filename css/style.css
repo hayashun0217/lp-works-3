@@ -646,7 +646,7 @@ a {
 # Q&A
 ===================================================== */
 .q-a {
-  background: url(/img/qa-bg@2x.png) no-repeat center center/cover;
+  background: url(/img/qa-bg.png) no-repeat center center/cover;
   padding-top: 60px;
   padding-bottom: 120px;
 }
@@ -711,11 +711,11 @@ a {
   right: 0;
   width: 17px;
   height: 17px;
-  background: url(/img/plus@2x.png) no-repeat center center/cover;
+  background: url(/img/plus.png) no-repeat center center/cover;
 }
 .q-a-item .drawer-icon.is-open {
   height: 4px;
-  background: url(/img/minus@2x.png) no-repeat center center/cover;
+  background: url(/img/minus.png) no-repeat center center/cover;
 }
 .q-a-item__answer {
   background: #3b69ff33;
@@ -863,7 +863,7 @@ a {
 .contact {
   padding-top: 60px;
   padding-bottom: 60px;
-  background: url(/img/contact-bg@2x.png) no-repeat center center/cover;
+  background: url(/img/contact-bg.png) no-repeat center center/cover;
 }
 @media screen and (max-width: 767px) {
   .contact {
