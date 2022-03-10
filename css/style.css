@@ -1,8 +1,4 @@
 @charset "UTF-8";
-/*=====================================================
-# ファイル分割
-===================================================== */
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,600;1,400&display=swap");
 /* ブレークポイント */
 .header {
   background: #ffffff1a;
@@ -177,6 +173,9 @@
   text-align: center;
 }
 
+/*=====================================================
+# ファイル分割
+===================================================== */
 html {
   font-size: 62.5%;
 }
@@ -877,7 +876,7 @@ a {
 }
 
 .contact-header {
-  background: url(/img/contact1@2x.png) no-repeat center center/cover;
+  background: url(/img/contact1.png) no-repeat center center/cover;
   padding-top: 60px;
   padding-bottom: 60px;
   text-align: center;
