@@ -1,5 +1,47 @@
 @charset "UTF-8";
 /* ブレークポイント */
+/*==========================================================================
+# reset - ブラウザの差異や不要なスタイルを無くすためのスタイル
+========================================================================== */
+* {
+  box-sizing: border-box;
+}
+
+html, body, h1, h2, h3, h4, h5, h6, ul, ol, dl, li, dt, dd, p, div, span, img, a, table, tr, th, td, small, button, time, figure {
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+li, dd {
+  list-style-type: none;
+}
+
+header, footer, nav, section, article, aside, figure, figcaption {
+  display: block;
+}
+
+img {
+  border: none;
+  vertical-align: bottom;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
 .header {
   background: #ffffff1a;
   position: fixed;
@@ -200,7 +242,7 @@ a {
 # top
 ===================================================== */
 .top {
-  background: url(/img/mv@2x.png) no-repeat center center/cover;
+  background: url(../img/mv.png) no-repeat center center/cover;
   height: 648px;
   width: 100%;
 }
@@ -645,7 +687,7 @@ a {
 # Q&A
 ===================================================== */
 .q-a {
-  background: url(/img/qa-bg.png) no-repeat center center/cover;
+  background: url(../img/qa-bg.png) no-repeat center center/cover;
   padding-top: 60px;
   padding-bottom: 120px;
 }
@@ -710,11 +752,11 @@ a {
   right: 0;
   width: 17px;
   height: 17px;
-  background: url(/img/plus.png) no-repeat center center/cover;
+  background: url(../img/plus.png) no-repeat center center/cover;
 }
 .q-a-item .drawer-icon.is-open {
   height: 4px;
-  background: url(/img/minus.png) no-repeat center center/cover;
+  background: url(../img/minus.png) no-repeat center center/cover;
 }
 .q-a-item__answer {
   background: #3b69ff33;
@@ -862,7 +904,7 @@ a {
 .contact {
   padding-top: 60px;
   padding-bottom: 60px;
-  background: url(/img/contact-bg.png) no-repeat center center/cover;
+  background: url(../img/contact-bg.png) no-repeat center center/cover;
 }
 @media screen and (max-width: 767px) {
   .contact {
@@ -876,7 +918,7 @@ a {
 }
 
 .contact-header {
-  background: url(/img/contact1.png) no-repeat center center/cover;
+  background: url(../img/contact1.png) no-repeat center center/cover;
   padding-top: 60px;
   padding-bottom: 60px;
   text-align: center;

@@ -1,5 +1,83 @@
 /* ブレークポイント */
 
+/*==========================================================================
+# reset - ブラウザの差異や不要なスタイルを無くすためのスタイル
+========================================================================== */
+
+* {
+	box-sizing: border-box;
+}
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+dl,
+li,
+dt,
+dd,
+p,
+div,
+span,
+img,
+a,
+table,
+tr,
+th,
+td,
+small,
+button,
+time,
+figure {
+	border: 0;
+	font: inherit;
+	font-size: 100%;
+	margin: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+
+html {
+	line-height: 1;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+li,
+dd {
+	list-style-type: none;
+}
+
+header,
+footer,
+nav,
+section,
+article,
+aside,
+figure,
+figcaption {
+	display: block;
+}
+
+img {
+	border: none;
+	vertical-align: bottom;
+}
+
+a {
+	cursor: pointer;
+	text-decoration: none;
+}
+
 .header {
 	background: #ffffff1a;
 	height: 80px;
@@ -143,7 +221,7 @@ a {
 ===================================================== */
 
 .top {
-	background: url(/img/mv@2x.png) no-repeat center center/cover;
+	background: url(../img/mv.png) no-repeat center center/cover;
 	height: 648px;
 	width: 100%;
 }
@@ -490,7 +568,7 @@ a {
 ===================================================== */
 
 .q-a {
-	background: url(/img/qa-bg.png) no-repeat center center/cover;
+	background: url(../img/qa-bg.png) no-repeat center center/cover;
 	padding-bottom: 120px;
 	padding-top: 60px;
 }
@@ -539,7 +617,7 @@ a {
 }
 
 .q-a-item .drawer-icon {
-	background: url(/img/plus.png) no-repeat center center/cover;
+	background: url(../img/plus.png) no-repeat center center/cover;
 	height: 17px;
 	position: absolute;
 	right: 0;
@@ -549,7 +627,7 @@ a {
 }
 
 .q-a-item .drawer-icon.is-open {
-	background: url(/img/minus.png) no-repeat center center/cover;
+	background: url(../img/minus.png) no-repeat center center/cover;
 	height: 4px;
 }
 
@@ -658,7 +736,7 @@ a {
 ===================================================== */
 
 .contact {
-	background: url(/img/contact-bg.png) no-repeat center center/cover;
+	background: url(../img/contact-bg.png) no-repeat center center/cover;
 	padding-bottom: 60px;
 	padding-top: 60px;
 }
@@ -669,7 +747,7 @@ a {
 }
 
 .contact-header {
-	background: url(/img/contact1.png) no-repeat center center/cover;
+	background: url(../img/contact1.png) no-repeat center center/cover;
 	color: #fff;
 	padding-bottom: 60px;
 	padding-top: 60px;

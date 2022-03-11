@@ -14,6 +14,8 @@ const rename = require("gulp-rename");
 
 const htmlBeautify = require("gulp-html-beautify");
 
+const sassGlob = require("gulp-sass-glob-use-forward");
+
 function test(done) {
   console.log("hello Gulp");  //処理の内容
   done();
@@ -30,6 +32,7 @@ function compileSass() {
   .pipe(gulp.dest("./public/assets/css/"))//出力先のパス
   //CSSファイル圧縮
   .pipe(cleanCss())
+  .pipe(sassGlob())
   .pipe(rename( {
     suffix: ".min"
   }))
