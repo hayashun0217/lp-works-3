@@ -5,8 +5,8 @@ $layout-width-inner: 1200px;
 /*=====================================================
 # ファイル分割
 ===================================================== */
+@use "custom/reset";
 @use "custom/mixin";
-@use "custom/resset";
 @use "lay/header";
 @use "lay/footer";
 @use "lay/common";
