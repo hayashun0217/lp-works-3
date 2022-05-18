@@ -16,6 +16,8 @@ const htmlBeautify = require("gulp-html-beautify");
 
 const sassGlob = require("gulp-sass-glob-use-forward");
 
+const pug = require("gulp-pug");
+
 function test(done) {
   console.log("hello Gulp");  //処理の内容
   done();
@@ -88,6 +90,16 @@ function copyImage() {
   .pipe(gulp.dest("./public/assets/img/"))
 }
 
+function compilePug() {
+  return gulp.src(["./src/**/*.pug","!./src/**/_*.pug"]) //_をつけたpugファイルは出力されない
+//コンパイルの処理を書く
+.pipe(pug( {
+  pretty: true  //改行されるようになる
+}) )//pugのパッケージを読み込む
+.pipe(gulp.dest("./public"))
+}
+
+exports.compilePug = compilePug; //実行できるようにする
 exports.test = test;    //コマンドで実行  コマンドでnpx gulp test
 exports.compileSass = compileSass;    //コマンドで実行  コマンドでnpx gulp compilesSass
 exports.watch = watch;    //コマンドで実行  コマンドでnpx gulp watch

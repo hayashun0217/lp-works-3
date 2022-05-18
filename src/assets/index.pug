@@ -1,0 +1,44 @@
+doctype html
+html lang="ja"
+
+head
+  meta(charset="UTF-8")
+  meta(http-equiv="X-UA-Compatible" content="IE=edge")
+  meta(name="viewport" content="width=device-width, initial-scale=1.0")
+  meta(name="robots" content="noindex,nofollow")
+  title コーポレートサイト
+  
+  link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/css/drawer.min.css" media="screen and (max-width:767px)")
+  link(rel="stylesheet" href="/css/resset.css")
+  link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css")
+  link(rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css")
+  link(rel="stylesheet" href="assets/css/style.css")
+
+body 
+  //header
+  include ./parts/_header.pug
+
+  //main
+  main.main
+    .top
+      .top-content
+        h1.top-content__title 詩が生れて、画が出来る。<br> とかくに人の世は住みにくい。
+        .top-content__btn: a(href="#") お問い合わせしてみる
+
+    //news
+    section.news#news 
+      .news__wrapper
+        h2.section-title News
+        .news-content
+        - for (var x = 0; x < 3; x++)
+          .news-item 
+            a.news-item__link(href="#")
+              .news-item__meta
+                .news-item__time 2019-02-01
+                .news-item__label テキスト
+              .new-item__text ニュースニュースニュースニュースニュースニュースニュース
+        .news-more: a(href="#") MORE
+
+    //service
+    section.service#service 
+    
