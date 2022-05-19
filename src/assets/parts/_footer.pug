@@ -1,0 +1,28 @@
+-
+  const informs = [
+    {
+      name:  "サイトマップ",
+      url: `#news`
+    },
+    {
+      name: "個人情報保護方針",
+      url: `#service`
+    },
+    {
+      name: "プライバシーポリシー",
+      url: `#result`
+    },
+  ];
+
+footer.footer 
+  .footer-inner
+    .footer-left
+      .footer-sns
+        a.footer-sns-icon(href=""): i.fab.fa-twitter-square
+        a.footer-sns-icon(href=""): i.fab.fa-facebook-square
+      .footer-inform
+      each inform in informs 
+        a(href=inform.url) #{inform.name}
+    .footer-right
+      .footer-sns-logo Sample Corp.
+      .footer-sub-logo © デイトラ Landing page Sample.

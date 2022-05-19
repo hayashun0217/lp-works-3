@@ -41,4 +41,162 @@ body
 
     //service
     section.service#service 
-    
+      h2.section-title Service
+      .service-inner 
+        - 
+          const service_items = [
+            {
+              img: "assets/img/service1.png",
+              alt: 'service-img1',
+              title: "DESIGN",
+            },
+            {
+              img: "assets/img/service1.png",
+              alt: 'service-img1',
+              title: "CODING",
+
+            },
+            {
+              img: "assets/img/service1.png",
+              alt: 'service-img1',
+              title: "SEO",
+
+            },
+          ]
+      each service_item in service_items
+        .service-item
+          .service-item__img: img(src=service_item.img, alt=service_item.alt)
+          .service-item__title WEB <br> #{service_item.title}
+          .service-item__text どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。意地を通せば窮屈だ。
+
+    //result
+    section.results#result 
+      .results-inner
+        h2.section-title Results
+        .swiper
+          .swiper-wrapper 
+          - for (var x = 0; x < 6; x++)
+            .swiper-slide
+              .swiper-img: img(src="assets/img/slide1.png", alt="slide-img1")
+              .swiper-body
+                p.swiper-text1 とかくに人の世は住みにくい。
+                p.swiper-text2 どこへ越しても住みにくいと悟った時、詩が生れて 、画が出来る。意地を通せば窮屈だ。
+
+          .swiper-pagination
+          button.btn-view VIEW ALL
+
+    //price
+    section.price#price 
+      .section-title
+      .price-inner
+        table 
+          tbody
+          - var tables = ['1','2','3']
+          each table in tables
+            tr
+              th row #{table}
+              td Price ¥10,000
+        .price-attention ※ 上記料金はサンプルです。
+
+    //comment
+    section.comment#comment 
+      .comment-container
+        .comment-content
+          p.comment-content__title Comments
+          ul.comment-content-profile
+            - 
+              const comment_items = [
+                {
+                  img: "assets/img/comments1.png",
+                  alt: "comments1",
+                },
+                {
+                  img: "assets/img/comments2.png",
+                  alt: "comments2",
+                },
+              ]
+            each comment_item in comment_items
+              li.comment-content-item
+                .comment-content-item__img: img(src=comment_item.img, alt=comment_item.alt)
+        .comment-img: img(src="assets/img/comments3.png", alt="comments3")
+      .comment-bg
+
+    //Q&A
+    section.q-a#q-a
+      h2.section-title Q&A
+      .q-a-inner
+        .q-a-items
+        - for (var x = 0; x < 6; x++)
+          .q-a-item 
+            .q-a-item__question 質問質問質問？<span class="drawer-icon"></span>
+            .q-a-item__answer 回答回答回答回答回答回答回答回答回答回答回答
+
+    //access
+    section.access#access
+      .access-bg
+      .access-content
+        .access-content__left
+          .access-content__left--title Access
+          .access-content__left--address
+            p 〒106-6126 <br>東京都港区六本木 6丁目 10-1 <br>六本木ヒルズ森タワー
+            .access-content__left--btn: a(href="#") Google Maps
+        .access-content__right
+          iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3223.4692587342975!2d139.25344711521075!3d36.106423814142836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601ed0e4f3e4c6fb%3A0x7a677b8d53bb69bc!2z5aSn5Yud5a6244GC44KJ44KM44GK44GL44GN!5e0!3m2!1sja!2sjp!4v1634880758014!5m2!1sja!2sjp", width="600" height="450" style="border:0;" loading="lazy") 
+      .access-btn2: a(href="#") Google Maps
+
+    //contact
+    section.contact#contact 
+      .contact-inner
+        .contact-header
+          .contact-header__title Contact Us
+          .contact-header__text どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。
+        form#js-form.contact-form(action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSczi5QxhZNqR73KNpULK3N912m2AiLTSBgGeSml8BiFjMIN2A/formResponse") 
+          dl 
+            .contact-item
+              dt 
+                label(for="your-kind") お問い合わせ種別
+              dd  
+                select#your-kind.contact-item__kind--option(name="entry.469921689") 
+                - 
+                  const contact_options = ['選択してください',"セレクトA","セレクトB","セレクトC"]
+                each contact_option in contact_options
+                  option(value="") #{contact_option}
+              
+            .contact-item
+              dt 性別
+              dd 
+                .contact-item__contact-radio-wrap
+                  label.contact-item__contact-radio-wrap-radio
+                    input.contact-radio-input(type="radio" name="entry.938026251" value="男性" checked)
+                    span.contact-radio-part 男性
+                  label.contact-item__contact-radio-wrap-radio
+                    input.contact-radio-input(type="radio" name="entry.938026251" value="女性")
+                    span.contact-radio-part 女性
+
+            .contact-message
+              dt メッセージ
+              dd: textarea.form-textarea(name="entry.1009828800") 
+
+            .contact-privacy
+              label.contact-privacy-input(type="checkbox" name="entry.1579021612" value="個人情報保護に同意する") 
+              span 個人情報保護方針に同意する
+
+            .contact-footer-submit
+              button#js-submit.util-link.-submit(type="submit") 送信
+          
+        .contact-message#js-success 
+          p 送信完了しました。ありがとうございました。
+        .contact-message.-error#js-error
+          p 送信に失敗しました。ページを更新してもう一度送信してください。
+  
+  //footer
+  include ./parts/_footer.pug
+
+  script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js")
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js")
+  // drawer.js 
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/js/drawer.min.js")
+
+  script(src="https://unpkg.com/swiper@7/swiper-bundle.min.js")
+  script(src="assets/js/script.js")
+
